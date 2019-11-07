@@ -18,12 +18,5 @@
   <!-- Custom styles for this template-->
   <link rel="icon" type="image/png" href="<?= base_url('assets/administrator/img/umb.png') ?>">
   <link href="<?= base_url('assets/administrator/css/sb-admin-2.min.css') ?>" rel="stylesheet">
-  <link href="<?= base_url('assets/administrator/vendor/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet">
-
 
 </head>
-
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">

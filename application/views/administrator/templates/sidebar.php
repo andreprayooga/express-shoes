@@ -1,8 +1,3 @@
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -33,18 +28,18 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link pb-0" href="<?= base_url('administrator/menu/DaftarToko') ?>">
           <i class="fas fa-fw fa-shopping-basket"></i>
           <span>Daftar Toko Mitra</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link pb-0" href="<?= base_url('administrator/menu/DaftarToko') ?>">
+        <a class="nav-link pb-0" href="<?= base_url('administrator/menu/DaftarUser') ?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Daftar User</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('administrator/menu/DaftarToko') ?>">
+        <a class="nav-link" href="<?= base_url('administrator/menu/KritikSaran') ?>">
           <i class="fas fa-fw fa-asterisk"></i>
           <span>Kritik & Saran</span></a>
       </li>
@@ -59,12 +54,13 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link pb-0" href="charts.html">
-          <i class="fas fa-fw fa-eye-slash"></i>
-          <span>Ubah Password</span></a>
+        <a class="nav-link pb-0" href="<?= base_url('administrator/settings/Profile') ?>">
+          <i class="fas fa-fw fa-user-shield"></i>
+          <span>My Profile</span></a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<?= base_url('Auth/logout') ?>">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Logout</span></a>
       </li>
