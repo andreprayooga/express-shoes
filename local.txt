@@ -1,0 +1,34 @@
+Tabel Toko :
+- ID_Toko
+- Nama_Toko
+- Email
+- Alamat
+- No_Telp
+- Latitude
+- Longitude
+- Logo
+- Jam_Buka
+- Jam_Tutup
+- Verifikasi_Akun
+- Date_Created
+
+Tabel Pengelola :
+- ID_Pengelola
+- Nama_Pengelola
+- Email
+- Password
+- No_Telp
+- Foto
+- Verifikasi_Akun
+- Role_ID
+- FK_Toko
+- Date_Created
+
+Tabel Komentar :
+- ID_Komentar
+- Nama 
+- Email
+- Jenis_Masukan
+- Toko_ID
+- Keterangan
+- Date_Created
