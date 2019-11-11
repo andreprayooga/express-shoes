@@ -22,7 +22,7 @@
 
                 <form class="user" method="post" action="<?= base_url('Auth/login'); ?>">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="username" name="username" autocomplete="off" value="<?= set_value('username') ?>" placeholder="Enter Username">
+                    <input type="email" class="form-control form-control-user" id="email" name="email" autocomplete="off" value="<?= set_value('email') ?>" placeholder="Enter Email">
                     <?= form_error('username','<small class="text-danger pl-3">','</small>' ); ?>
                   </div>
                   <div class="form-group">

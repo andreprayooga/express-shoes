@@ -4,7 +4,7 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Master Data User</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -12,24 +12,22 @@
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th>Nama Toko</th>
-                      <th>Pengelola</th>
+                      <th>Nama</th>
                       <th>Email</th>
-                      <th>Alamat</th>
+                      <th>No. HP</th>
 											<th>No. Telp</th>
-											<th>Buka - Tutup</th>
+											<th>Date Created</th>
 											<th>Aksi</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th>No</th>
-                      <th>Nama Toko</th>
-                      <th>Pengelola</th>
+                      <th>Nama</th>
+                      <th>No. HP</th>
                       <th>Email</th>
-                      <th>Alamat</th>
 											<th>No. Telp</th>
-											<th>Buka - Tutup</th>
+											<th>Date Created</th>
 											<th>Aksi</th>
                     </tr>
                   </tfoot>

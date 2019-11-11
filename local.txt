@@ -1,34 +1,69 @@
 Tabel Toko :
-- ID_Toko
-- Nama_Toko
-- Email
-- Alamat
-- No_Telp
-- Latitude
-- Longitude
-- Logo
-- Jam_Buka
-- Jam_Tutup
-- Verifikasi_Akun
-- Date_Created
+- id_toko
+- nama_Toko
+- email
+- alamat
+- no_Telp
+- logo
+- service_available
+- jam_Buka
+- jam_Tutup
+- is_active
+- date_created
 
 Tabel Pengelola :
-- ID_Pengelola
-- Nama_Pengelola
-- Email
-- Password
-- No_Telp
-- Foto
-- Verifikasi_Akun
-- Role_ID
-- FK_Toko
-- Date_Created
+- id_pengelola
+- nama_Pengelola
+- email
+- password
+- no_Telp
+- foto
+- is_active
+- role_id
+- toko_id
+- date_created
 
-Tabel Komentar :
-- ID_Komentar
-- Nama 
-- Email
-- Jenis_Masukan
-- Toko_ID
-- Keterangan
-- Date_Created
+Tabel User :
+- id_user
+- nama_user
+- email
+- password
+- no_telp
+- alamat
+- foto
+- toko_id
+- sepatu_id
+- role_id
+- is_active
+- date_created
+
+
+Tabel Komentar 
+- id_komentar
+- nama 
+- email
+- jenis_masukan
+- toko_id
+- keterangan
+- date_created
+
+Tabel Sepatu :
+- id_sepatu
+- toko_id
+- merk_sepatu
+- size
+- user_id 
+- pegawai_id
+- jenis_service
+- gambar
+- date_created
+
+Tabel Pegawai
+- id_pegawai
+- nama_pegawai
+- email
+- password
+- toko_id
+- foto
+- is_active
+- date_created

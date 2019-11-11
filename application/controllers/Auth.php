@@ -11,7 +11,7 @@ class Auth extends CI_Controller {
 
 	public function login()
 	{
-		$this->form_validation->set_rules('username', 'Username', 'trim|required');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 
 		if($this->form_validation->run() == false) {
@@ -20,16 +20,16 @@ class Auth extends CI_Controller {
         	$this->load->view('administrator/auth/login');
         	$this->load->view('administrator/templates/auth_footer');
 		} else {
-			$this->_login();
+			$this->session_login();
 		}
 	}
 
-	private function _login()
+	private function session_login()
 	{
-		$username = $this->input->post('username');
+		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 
-		$tb_admin = $this->db->get_where('tb_admin', ['username' => $username])->row_array(); 
+		$tb_admin = $this->db->get_where('tb_admin', ['email' => $email])->row_array(); 
 
 		if($tb_admin) {
 			//jika user active
@@ -37,7 +37,7 @@ class Auth extends CI_Controller {
 				//cek password
 				if(password_verify($password, $tb_admin['password'])) {
 					$data = [
-						'username' => $tb_admin['username'],
+						'email' => $tb_admin['email'],
 						'role_id' => $tb_admin['role_id']
 					];
 					$this->session->set_userdata($data);
@@ -96,7 +96,7 @@ class Auth extends CI_Controller {
 
 	public function logout ()
 	{
-		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('email');
 		$this->session->unset_userdata('role_id');
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logout!</div>');
 		redirect('Auth/login');

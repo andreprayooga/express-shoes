@@ -39,20 +39,14 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<?= base_url('assets/administrator/vendor/jquery/jquery.min.js') ?>"></script>
-  <script>
-    $(".nav-item").on("click", function(e){
-      $("li.nav-item").removeClass("active");
-      $(this).addClass("active");
-    });
-  </script>
+  <script src="<?= base_url('assets/administrator/vendor/jquery/jquery.js') ?>"></script>
   <script src="<?= base_url('assets/administrator/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="<?= base_url('assets/administrator/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<?= base_url ('assets/administrator/js/sb-admin-2.min.js') ?>"></script>
+  <script src="<?= base_url ('assets/administrator/js/sb-admin-2.js') ?>"></script>
 
   <!-- Page level plugins -->
   <script src="<?= base_url('assets/administrator/vendor/chart.js/Chart.min.js') ?>"></script>
