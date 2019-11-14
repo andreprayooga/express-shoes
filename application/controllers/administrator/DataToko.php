@@ -6,7 +6,7 @@ class DataToko extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Data Toko Mitra';
-		$data['tb_admin'] = $this->db->get_where('tb_admin', ['username' => $this->session->userdata('username')])->row_array();
+		$data['tb_admin'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
 		$data['url'] = 'DataToko';
 
         $this->load->view('administrator/templates/header', $data);

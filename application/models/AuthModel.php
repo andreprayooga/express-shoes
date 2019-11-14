@@ -5,6 +5,6 @@ class AuthModel extends CI_Model {
 
 	public function get_id()
 	{
-		$this->db->where('id_admin', $id)->get('tb_admin')->row(0);
+		$this->db->where('id_admin', $id_admin)->get('tb_admin')->row(0);
 	}
 }
