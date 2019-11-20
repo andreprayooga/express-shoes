@@ -1,95 +1,94 @@
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon">
-          <i class="fas fa-exclamation-triangle"></i>
-        </div>
-        <div class="sidebar-brand-text mx-2">Express</div>
-      </a>
-
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Main Navigation
-      </div> 
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item <?php echo $url == 'Dashboard' ? "active" : ''?>">
-        <a class="nav-link pb-0" href="<?= base_url('administrator/Dashboard') ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item <?php echo $url == 'DataToko' ? "active" : ''?> || <?php echo $url == 'DataUser' ? "active" : ''?> || <?php echo $url == 'DataPengelola' ? "active" : ''?> || <?php echo $url == 'DataPegawai' ? "active" : ''?>" >
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-chess-queen"></i>
-          <span>Master Data</span>
-        </a>
-
-        <div id="collapseUtilities" class="collapse <?php echo $url == 'DataToko' ? "show" : ''?> || <?php echo $url == 'DataUser' ? "show" : ''?> || <?php echo $url == 'DataPengelola' ? "show" : ''?> || <?php echo $url == 'DataPegawai' ? "show" : ''?>" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Utilities :</h6>
-            <a class="collapse-item <?php echo $url == 'DataToko' ? "active" : ''?>" href="<?= base_url('administrator/DataToko') ?>"><i class="fas fa-fw fa-cart-arrow-down"></i>&nbsp&nbsp Data Toko</a>
-            <a class="collapse-item <?php echo $url == 'DataUser' ? "active" : ''?>" href="<?= base_url('administrator/DataUser') ?>"><i class="fas fa-fw fa-users"></i>&nbsp&nbsp Data User</a>
-            <a class="collapse-item <?php echo $url == 'DataPengelola' ? "active" : ''?>" href="<?= base_url('administrator/DataPengelola') ?>"><i class="fas fa-fw fa-user-cog"></i>&nbsp&nbsp Data Pengelola</a>
-            <a class="collapse-item <?php echo $url == 'DataPegawai' ? "active" : ''?>" href="<?= base_url('administrator/DataPegawai') ?>"><i class="fas fa-fw fa-user-check"></i>&nbsp&nbsp Data Pegawai</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Main Menu
-      </div>
-
-                  <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item <?php echo $url == 'DataLaundry' ? "active" : ''?> || <?php echo $url == 'DataService' ? "active" : ''?>">
-        <a class="nav-link collapsed " href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-chess-knight"></i>
-          <span>Reports</span>
-        </a>
-        
-        <div id="collapseTwo" class="collapse <?php echo $url == 'DataLaundry' ? "show" : ''?> || <?php echo $url == 'DataService ' ? "show" : ''?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Reports :</h6>
-            <a class="collapse-item <?php echo $url == 'DataLaundry' ? "active" : ''?>" href="<?php echo base_url('administrator/DataLaundry') ?>"><i class="fas fa-fw fa-list"></i>&nbsp&nbsp Data Laundry</a>
-            <a class="collapse-item <?php echo $url == 'DataService' ? "active" : ''?>" href="<?php echo base_url('administrator/DataService') ?>"><i class="fas fa-fw fa-list"></i>&nbsp&nbsp Data Service</a>
-          </div>
-        </div>
-      </li>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item <?php echo $url == 'Profile' ? "active" : ''?>">
-        <a class="nav-link pb-0 pt-0" href="<?= base_url('administrator/Profile') ?>">
-          <i class="fas fa-fw fa-user-shield"></i>
-          <span>My Profile</span></a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('Auth/logout') ?>">
-          <i class="fas fa-fw fa-sign-out-alt"></i>
-          <span>Logout</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-
-    </ul>
-    <!-- End of Sidebar -->
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input
+                type="text"
+                name="q"
+                class="form-control"
+                placeholder="Search..."
+                autocomplete="off"
+              />
+              <span class="input-group-btn">
+                <button
+                  type="submit"
+                  name="search"
+                  id="search-btn"
+                  class="btn btn-flat"
+                >
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="<?php echo $url == 'Dashboard' ? "active" : ''?>">
+                <a href="<?php echo base_url('administrator/dashboard');  ?>"><i class="fa fa-home"></i> <span>Dashboard</span></a>
+			</li>
+			<li class="<?php echo $url == 'DataToko' ? "active" : ''?>">
+				<a href="<?php echo base_url('administrator/datatoko');  ?>">
+				<i class="fa fa-umbrella"></i> Toko</a>
+			</li>
+            <li class="treeview <?php echo $url == 'DataMember' ? "active" : ''?> || <?php echo $url == 'DataPengelola' ? "active" : ''?> || <?php echo $url == 'DataPegawai' ? "active" : ''?>">
+              <a href="#">
+                <i class="fa fa-user"></i>
+                <span> Member Data</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="<?php echo $url == 'DataMember' ? "active" : ''?>">
+					<a href="<?php echo base_url('administrator/datamember'); ?>">
+					<i class="fa fa-circle-o"></i> Member</a>
+                </li>
+                <li class="<?php echo $url == 'DataPengelola' ? "active" : ''?>">
+					<a href="<?php echo base_url('administrator/datapengelola'); ?>">
+					<i class="fa fa-circle-o"></i> Pengelola</a>
+                </li>
+                <li class="<?php echo $url == 'DataPegawai' ? "active" : ''?>">
+					<a href="<?php echo base_url('administrator/datapegawai'); ?>">
+					<i class="fa fa-circle-o"></i> Pegawai</a>
+                </li>
+              </ul>
+			</li>
+			<li class="treeview">
+              <a href="#">
+                <i class="fa fa-link"></i>
+                <span>Reports</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li>
+					<a href="pages/charts/chartjs.html">
+					<i class="fa fa-history"></i>Data Laundry</a>
+                </li>
+                <li>
+					<a href="pages/charts/morris.html">
+					<i class="fa fa-history"></i>Data Service</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+			<li class="header">MAIN MENU</li>
+			<li class="<?php echo $url == 'Profile' ? "active" : ''?>">
+				<a href="<?php echo base_url('administrator/profile'); ?>">
+				<i class="fa fa-cogs"></i>&nbsp; My Profile</a>
+			</li>
+			<li>
+				<a href="pages/charts/morris.html">
+				<i class="fa fa-sign-out"></i>&nbsp; Logout</a>
+            </li>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>

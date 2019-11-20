@@ -67,3 +67,10 @@ Tabel Pegawai
 - foto
 - is_active
 - date_created
+
+Tabel Service
+- id_service
+- id_toko
+- jenis_service
+- keterangan
+- date_created
