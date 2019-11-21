@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2019 at 05:33 PM
+-- Generation Time: Nov 21, 2019 at 07:35 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -148,6 +148,24 @@ CREATE TABLE `tb_komentar` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_pegawai`
+--
+
+CREATE TABLE `tb_pegawai` (
+  `id_pegawai` int(11) NOT NULL,
+  `nama_pegawai` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `toko_id` int(11) NOT NULL,
+  `foto` varchar(128) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `is_active` int(1) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_pengelola`
 --
 
@@ -182,7 +200,91 @@ CREATE TABLE `tb_role` (
 INSERT INTO `tb_role` (`id_level`, `keterangan`) VALUES
 (1, 'Administrator'),
 (2, 'Member'),
-(3, 'Employee');
+(3, 'Employee'),
+(4, 'Pengelola');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_sepatu`
+--
+
+CREATE TABLE `tb_sepatu` (
+  `id_sepatu` int(11) NOT NULL,
+  `toko_id` int(11) NOT NULL,
+  `merk_sepatu` varchar(256) NOT NULL,
+  `size` varchar(128) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `pegawai_id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `gambar` varchar(128) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_service`
+--
+
+CREATE TABLE `tb_service` (
+  `id_service` int(11) NOT NULL,
+  `toko_id` int(11) NOT NULL,
+  `jenis_service` varchar(256) NOT NULL,
+  `keterangan` varchar(512) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_toko`
+--
+
+CREATE TABLE `tb_toko` (
+  `id_toko` int(11) NOT NULL,
+  `nama_toko` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `alamat` varchar(256) NOT NULL,
+  `no_telp` varchar(128) NOT NULL,
+  `logo` varchar(128) NOT NULL,
+  `jam_buka` time NOT NULL,
+  `jam_tutup` time NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_toko`
+--
+
+INSERT INTO `tb_toko` (`id_toko`, `nama_toko`, `email`, `alamat`, `no_telp`, `logo`, `jam_buka`, `jam_tutup`, `date_created`) VALUES
+(1, '123', 'qwqw@gmail.com', 'cfdfddf', '3344343434', '', '06:15:00', '05:00:00', '2019-11-19 16:05:16'),
+(2, 'Bungaku', 'bunga@gmail.com', 'Malang', '12341234', '', '05:15:00', '05:15:00', '2019-11-19 16:08:23'),
+(3, 'sddds', '11@gmail.com', 'cddfdf', '1212121', 'file_name', '05:15:00', '05:15:00', '2019-11-19 16:10:10'),
+(4, '1212', 'amaw@gmail.com', 'sdsdsdsdsd', '1112112', 'file_name', '05:15:00', '05:15:00', '2019-11-19 16:15:39'),
+(5, '1221222', 'anss@gmail.com', 'saasas', '12112112', '', '05:15:00', '05:15:00', '2019-11-19 16:21:16'),
+(6, '1122', 'fdgg@gmail.com', 'sdsddsd', '121222121', '', '05:30:00', '05:30:00', '2019-11-19 16:22:03'),
+(7, '121221', 'sddd@gmail.com', 'dss', '2232233', '', '05:30:00', '05:30:00', '2019-11-19 16:22:47'),
+(8, 'weewwewew', '2434@gmail.com', 'dssdds', '13245324', '', '01:00:00', '01:00:00', '2019-11-20 11:50:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `id_user` int(11) NOT NULL,
+  `nama_user` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `no_telp` varchar(128) NOT NULL,
+  `alamat` varchar(512) NOT NULL,
+  `foto` varchar(128) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `is_active` int(1) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -243,6 +345,13 @@ ALTER TABLE `tb_komentar`
   ADD PRIMARY KEY (`id_komentar`);
 
 --
+-- Indexes for table `tb_pegawai`
+--
+ALTER TABLE `tb_pegawai`
+  ADD PRIMARY KEY (`id_pegawai`),
+  ADD KEY `role_id` (`role_id`);
+
+--
 -- Indexes for table `tb_pengelola`
 --
 ALTER TABLE `tb_pengelola`
@@ -254,6 +363,34 @@ ALTER TABLE `tb_pengelola`
 --
 ALTER TABLE `tb_role`
   ADD PRIMARY KEY (`id_level`);
+
+--
+-- Indexes for table `tb_sepatu`
+--
+ALTER TABLE `tb_sepatu`
+  ADD PRIMARY KEY (`id_sepatu`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `pegawai_id` (`pegawai_id`);
+
+--
+-- Indexes for table `tb_service`
+--
+ALTER TABLE `tb_service`
+  ADD PRIMARY KEY (`id_service`),
+  ADD KEY `toko_id` (`toko_id`);
+
+--
+-- Indexes for table `tb_toko`
+--
+ALTER TABLE `tb_toko`
+  ADD PRIMARY KEY (`id_toko`);
+
+--
+-- Indexes for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `role_id` (`role_id`);
 
 --
 -- Indexes for table `user`
@@ -296,6 +433,12 @@ ALTER TABLE `tb_komentar`
   MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `tb_pegawai`
+--
+ALTER TABLE `tb_pegawai`
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_pengelola`
 --
 ALTER TABLE `tb_pengelola`
@@ -305,7 +448,31 @@ ALTER TABLE `tb_pengelola`
 -- AUTO_INCREMENT for table `tb_role`
 --
 ALTER TABLE `tb_role`
-  MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tb_sepatu`
+--
+ALTER TABLE `tb_sepatu`
+  MODIFY `id_sepatu` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_service`
+--
+ALTER TABLE `tb_service`
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_toko`
+--
+ALTER TABLE `tb_toko`
+  MODIFY `id_toko` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -324,10 +491,35 @@ ALTER TABLE `tb_admin`
   ADD CONSTRAINT `tb_admin_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
 
 --
+-- Constraints for table `tb_pegawai`
+--
+ALTER TABLE `tb_pegawai`
+  ADD CONSTRAINT `tb_pegawai_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
+
+--
 -- Constraints for table `tb_pengelola`
 --
 ALTER TABLE `tb_pengelola`
   ADD CONSTRAINT `tb_pengelola_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
+
+--
+-- Constraints for table `tb_sepatu`
+--
+ALTER TABLE `tb_sepatu`
+  ADD CONSTRAINT `tb_sepatu_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tb_user` (`id_user`),
+  ADD CONSTRAINT `tb_sepatu_ibfk_2` FOREIGN KEY (`pegawai_id`) REFERENCES `tb_pegawai` (`id_pegawai`);
+
+--
+-- Constraints for table `tb_service`
+--
+ALTER TABLE `tb_service`
+  ADD CONSTRAINT `tb_service_ibfk_1` FOREIGN KEY (`toko_id`) REFERENCES `tb_toko` (`id_toko`);
+
+--
+-- Constraints for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD CONSTRAINT `tb_user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

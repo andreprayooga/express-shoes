@@ -1,62 +1,80 @@
-<footer class="main-footer">
-        <div class="pull-right hidden-xs"><b>Version</b> BETA</div>
-        <strong>Copyright &copy; 2019
-          <a href="https://adminlte.io">Management Project</a></strong>
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          	<div class="copyright text-center my-auto">
+            	<span>Copyright &copy; Manajemen Proyek Kelompok 8</span>
+          	</div>
+        </div>
       </footer>
+      <!-- End of Footer -->
+
     </div>
-	<!-- ./wrapper -->
+    <!-- End of Content Wrapper -->
 
-    <!-- jQuery 3 -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<!-- DataTables -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>bower_components/fastclick/lib/fastclick.js"></script>
-    <!-- AdminLTE App -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>dist/js/adminlte.min.js"></script>
-	<!-- date-range-picker -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/moment/min/moment.min.js"></script>
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-	<!-- bootstrap datepicker -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-	<!-- bootstrap color picker -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-	<!-- bootstrap time picker -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
-    <!-- Sparkline -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-    <!-- jvectormap  -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="<?php echo base_url('assets/administrator/'); ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <!-- SlimScroll -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- ChartJS -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>bower_components/chart.js/Chart.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="<?php echo base_url('assets/administrator/'); ?>dist/js/pages/dashboard2.js"></script>
-    <!-- AdminLTE for demo purposes -->
-	<script src="<?php echo base_url('assets/administrator/'); ?>dist/js/demo.js"></script>
+  </div>
+  <!-- End of Page Wrapper -->
 
-	<script>
-  	$(function () {
-		$('#example1').DataTable()
-		$('#example2').DataTable({
-		'paging'      : true,
-		'lengthChange': false,
-		'searching'   : false,
-		'ordering'    : true,
-		'info'        : true,
-		'autoWidth'   : false
-    	})
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fas fa-angle-up"></i>
+	</a>
 
-		$('.timepicker').timepicker({
-      showInputs: false
-    	})
-		
-  	})
-	</script>
-  </body>
+		<!-- Logout Modal-->
+		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+
+				<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+						<a class="btn btn-primary" href="<?= base_url('Auth/logout') ?>">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="<?= base_url('assets/administrator/vendor/jquery/jquery.min.js') ?>"></script>
+	<script src="<?= base_url('assets/administrator/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="<?= base_url('assets/administrator/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="<?= base_url ('assets/administrator/dist/js/sb-admin-2.min.js') ?>"></script>
+
+	<!-- Page level plugins -->
+	<script src="<?= base_url('assets/administrator/vendor/chart.js/Chart.min.js') ?>"></script>
+	<script src="<?= base_url('assets/administrator/vendor/datatables/jquery.dataTables.min.js') ?>"></script>
+	<script src="<?= base_url('assets/administrator/vendor/datatables/dataTables.bootstrap4.min.js') ?>"></script>
+
+
+  	<!-- Page level custom scripts -->
+	<script src="<?= base_url('assets/administrator/dist/js/demo/chart-area-demo.js') ?>"></script>
+	<script src="<?= base_url('assets/administrator/dist/js/demo/chart-pie-demo.js') ?>"></script>
+	<script src="<?= base_url('assets/administrator/dist/js/demo/datatables-demo.js') ?>"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
+	<script src="<?= base_url('assets/administrator/datetimepicker/js/bootstrap-datetimepicker.min.js'); ?>"></script>
+
+	  <script type="text/javascript">
+	  	$('.custom-file-input').on('change', function() {
+			  let fileName = $(this).val().split('\\').pop();
+			  $(this).next('.custom-file-label').addClass("Selected").html(fileName);
+		  });
+
+        $(function () {
+			$('#jam_buka').datetimepicker();
+			$('#jam_tutup').datetimepicker();
+        });
+    </script>
+
+</body>
+
 </html>

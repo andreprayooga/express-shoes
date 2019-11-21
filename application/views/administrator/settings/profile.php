@@ -10,9 +10,10 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $tb_admin['nama_admin']; ?></h5>
-                    <hr>
-                    <p class="card-text">Email : <?= $tb_admin['email']; ?></p>
-                    <p class="card-text" class="text-muted">Account Since : <?= date("d F Y",strtotime ($tb_admin['date_created'])); ?></p>
+                    <p class="card-text"><?= $tb_admin['email']; ?></p>
+                    <p class="card-text"><small class="text-muted">Member Since : <?= date("d F Y",strtotime ($tb_admin['date_created'])); ?></small></p>
+                    <button href="#" class="btn btn-primary btn-sm">Details</button>
+                    <button href="#" class="btn btn-warning btn-sm">Edit</button>
                 </div>
             </div>
         </div>
