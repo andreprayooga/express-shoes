@@ -9919,6 +9919,14 @@ a:focus {
   position: relative;
 }
 
+.badge-custom {
+  position: absolute;
+  transform: scale(0.6);
+  transform-origin: center;
+  right: .30rem;
+  margin-top: -.0rem;
+}
+
 .sidebar .nav-item .nav-link .badge-counter,
 .topbar .nav-item .nav-link .badge-counter {
   position: absolute;

@@ -17,7 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link rel="icon" type="image/png" href="<?= base_url('assets/administrator/dist/img/umb.png') ?>">
-  <link href="<?= base_url('assets/administrator/dist/css/sb-admin-2.min.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/administrator/dist/css/sb-admin-2.css') ?>" rel="stylesheet">
   <link href="<?= base_url('assets/administrator/vendor/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet">
 
   <!-- Date Time Picker -->

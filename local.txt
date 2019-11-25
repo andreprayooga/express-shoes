@@ -67,3 +67,11 @@ Tabel Pegawai
 - foto
 - is_active
 - date_created
+
+Tabel Jadwal
+- id_jadwal
+- toko_id
+- hari
+- jam_buka
+- jam_tutup
+- date_created

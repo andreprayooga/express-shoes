@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link rel="icon" type="image/png" href="<?= base_url('assets/administrator/img/umb.png') ?>">
-  <link href="<?= base_url('assets/administrator/css/sb-admin-2.min.css') ?>" rel="stylesheet">
+  <link rel="icon" type="image/png" href="<?= base_url('assets/administrator/dist/img/umb.png') ?>">
+  <link href="<?= base_url('assets/administrator/dist/css/sb-admin-2.min.css') ?>" rel="stylesheet">
 
 </head>

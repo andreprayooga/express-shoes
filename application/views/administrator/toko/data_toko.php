@@ -1,6 +1,8 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
+		<?php echo $this->session->flashdata('message'); ?>
+
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-1">
@@ -10,7 +12,7 @@
 				</div>
 
 				<div class="float-right">
-				<a href="<?php echo base_url('administrator/datatoko/insert'); ?>" class="btn btn-sm btn-primary mt-2"><i class="fas fa-plus-circle mr-1"></i>Tambah Data</a>
+				<a class="btn btn-sm btn-primary mt-2" href="<?php echo base_url('administrator/datatoko/insert')  ?>"><i class="fas fa-plus-circle mr-1"></i>Tambah Data</a>
 				</div>
 			</div>
 			</div>
@@ -23,10 +25,10 @@
 						<th>No</th>
 						<th>Nama Toko</th>
 						<th>Email</th>
-						<th>No. Telp</th>
-						<th>Jam Buka</th>
-						<th>Jam Tutup</th>
-						<th>Aksi</th>
+						<th>No. HP</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Options</th>
 					</tr>
 					</thead>
 					
@@ -35,15 +37,28 @@
 					  	<th>No</th>
 						<th>Nama Toko</th>
 						<th>Email</th>
-						<th>No. Telp</th>
-						<th>Jam Buka</th>
-						<th>Jam Tutup</th>
-						<th>Aksi</th>
+						<th>No. HP</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Options</th>
                     </tr>
-					</tfoot>
-					
+					</tfoot>		
                 	<tbody>
-					  
+						<?php foreach($data as $num => $val) : ?>
+							<tr>
+								<td><?php echo ++$num; ?></td>
+								<td><?php echo $val->nama_toko ?></td>
+								<td><?php echo $val->email ?></td>
+								<td><?php echo $val->no_telp ?></td>
+								<td><?php echo $val->latitude ?></td>
+								<td><?php echo $val->longitude ?></td>
+								<td>
+								<a class="btn-sm btn-primary" href="#"><i class="fas fa-search"></i></a>
+								<a class="btn-sm btn-warning" href="<?php echo site_url("administrator/datatoko/update/" .$val->id_toko) ?>"><i class="fas fa-edit"></i></a>
+								<a class="btn-sm btn-danger" href="<?php echo site_url("administrator/datatoko/delete/" .$val->id_toko) ?>"><i class="fas fa-trash-alt"></i></a>
+								</td>
+							</tr>
+						<?php endforeach; ?> 
                 	</tbody>
                 </table>
               </div>
