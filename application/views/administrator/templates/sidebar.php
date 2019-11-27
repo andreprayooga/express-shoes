@@ -31,7 +31,7 @@
 	  <li class="nav-item <?php echo $url == 'DataToko' ? "active" : ''?>">
 		<a class="nav-link pb-0" href="<?= base_url('administrator/DataToko') ?>">
 		  <i class="fas fa-fw fa-bookmark"></i>
-		 <span>Toko</span></a>
+		 <span>Store</span></a>
 	  </li>
 
 			<!-- Nav Item - Utilities Collapse Menu -->
@@ -44,8 +44,8 @@
 		<div id="collapseUtilities" class="collapse <?php echo $url == 'DataUser' ? "show" : ''?> || <?php echo $url == 'DataPengelola' ? "show" : ''?> || <?php echo $url == 'DataPegawai' ? "show" : ''?>" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
 		  <div class="bg-white py-2 collapse-inner rounded">
 			<h6 class="collapse-header">Utilities :</h6>
-			<a class="collapse-item <?php echo $url == 'DataUser' ? "active" : ''?>" href="<?= base_url('administrator/datauser') ?>"><i class="fas fa-fw fa-users mr-2"></i>Data User</a>
-			<a class="collapse-item <?php echo $url == 'DataPegawai' ? "active" : ''?>" href="<?= base_url('administrator/datapegawai') ?>"><i class="fas fa-fw fa-user-check mr-2"></i>Data Pegawai</a>
+			<a class="collapse-item <?php echo $url == 'DataUser' ? "active" : ''?>" href="<?= base_url('administrator/datauser') ?>"><i class="fas fa-fw fa-users mr-2"></i>User Data</a>
+			<a class="collapse-item <?php echo $url == 'DataPegawai' ? "active" : ''?>" href="<?= base_url('administrator/datapegawai') ?>"><i class="fas fa-fw fa-user-check mr-2"></i>Employee Data</a>
 		  </div>
 		</div>
 	  </li>
@@ -68,8 +68,8 @@
 		<div id="collapseTwo" class="collapse <?php echo $url == 'DataLaundry' ? "show" : ''?> || <?php echo $url == 'DataService ' ? "show" : ''?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 		  <div class="bg-white py-2 collapse-inner rounded">
 			<h6 class="collapse-header">Custom Reports :</h6>
-			<a class="collapse-item <?php echo $url == 'DataLaundry' ? "active" : ''?>" href="<?php echo base_url('administrator/DataLaundry') ?>"><i class="fas fa-fw fa-history mr-2"></i> Data Laundry</a>
-			<a class="collapse-item <?php echo $url == 'DataService' ? "active" : ''?>" href="<?php echo base_url('administrator/DataService') ?>"><i class="fas fa-fw fa-history mr-2"></i> Data Service</a>
+			<a class="collapse-item <?php echo $url == 'DataLaundry' ? "active" : ''?>" href="<?php echo base_url('administrator/DataLaundry') ?>"><i class="fas fa-fw fa-history mr-2"></i>Laundry Reports</a>
+			<a class="collapse-item <?php echo $url == 'DataService' ? "active" : ''?>" href="<?php echo base_url('administrator/DataService') ?>"><i class="fas fa-fw fa-history mr-2"></i>Service Reportss</a>
 		  </div>
 		</div>
 	  </li>

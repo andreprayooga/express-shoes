@@ -52,6 +52,7 @@ class TokoModel extends CI_Model {
 			$data['logo'] = $logo;
 		  }
 
+		  $this->db->set($data);
 		  $this->db->where('id_toko', $id);
 		  $this->db->update('tb_toko', $data);
 	}

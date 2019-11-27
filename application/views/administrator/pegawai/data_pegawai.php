@@ -12,7 +12,7 @@
 				</div>
 
 				<div class="float-right">
-				<a class="btn btn-sm btn-primary mt-2" href="<?php echo base_url('administrator/datatoko/insert')  ?>"><i class="fas fa-plus-circle mr-1"></i>Tambah Data</a>
+				<a class="btn btn-sm btn-primary mt-2" href="<?php echo base_url('administrator/datapegawai/insert')  ?>"><i class="fas fa-plus-circle mr-1"></i>Add Data</a>
 				</div>
 			</div>
 			</div>
@@ -23,11 +23,10 @@
                 	<thead>
                     <tr>
 						<th>No</th>
-						<th>Store Name</th>
+						<th>Nama Toko</th>
 						<th>Email</th>
-						<th>Phone</th>
-						<th>Latitude</th>
-						<th>Longitude</th>
+						<th>Store</th>
+						<th>Status</th>
 						<th>Options</th>
 					</tr>
 					</thead>
@@ -35,11 +34,10 @@
                 	<tfoot>
                   	<tr>
 					  	<th>No</th>
-						<th>Store Name</th>
+						<th>Nama Toko</th>
 						<th>Email</th>
-						<th>Phone</th>
-						<th>Latitude</th>
-						<th>Longitude</th>
+						<th>Store</th>
+						<th>Status</th>
 						<th>Options</th>
                     </tr>
 					</tfoot>		
@@ -47,15 +45,19 @@
 						<?php foreach($data as $num => $val) : ?>
 							<tr>
 								<td><?php echo ++$num; ?></td>
-								<td><?php echo $val->nama_toko ?></td>
+								<td><?php echo $val->nama_pegawai ?></td>
 								<td><?php echo $val->email ?></td>
-								<td><?php echo $val->no_telp ?></td>
-								<td><?php echo $val->latitude ?></td>
-								<td><?php echo $val->longitude ?></td>
+								<td><?php echo $val->nama_toko ?></td>
+								<td><?php if($val->is_active == 1 ){
+										echo '<span class="badge badge-pill badge-success">Active</span>';
+									} else{
+										echo '<span class="badge badge-pill badge-danger">Inactive</span>';
+									}  
+								?></td>
 								<td>
 								<a class="btn-sm btn-primary" href="#"><i class="fas fa-search"></i></a>
-								<a class="btn-sm btn-warning" href="<?php echo site_url("administrator/datatoko/update/" .$val->id_toko) ?>"><i class="fas fa-edit"></i></a>
-								<a class="btn-sm btn-danger" href="<?php echo site_url("administrator/datatoko/delete/" .$val->id_toko) ?>"><i class="fas fa-trash-alt"></i></a>
+								<a class="btn-sm btn-warning" href="<?php echo site_url("administrator/datapegawai/update/" .$val->id_pegawai) ?>"><i class="fas fa-edit"></i></a>
+								<a class="btn-sm btn-danger" href="<?php echo site_url("administrator/datapegawai/delete/" .$val->id_pegawai) ?>"><i class="fas fa-trash-alt"></i></a>
 								</td>
 							</tr>
 						<?php endforeach; ?> 

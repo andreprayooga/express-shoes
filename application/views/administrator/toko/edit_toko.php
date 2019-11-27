@@ -7,7 +7,7 @@
 		<?php echo $this->session->flashdata('message'); ?>
 
         <div class="col-lg-8">
-        <?php echo form_open_multipart('administrator/datatoko/update');?>
+        <?php echo form_open_multipart('administrator/datatoko/update/' . $data->id_toko);?>
             <div class="form-group row">
                 <label for="nama_toko" class="col-sm-2 col-form-label">Nama Toko</label>
                 <div class="col-sm-10">

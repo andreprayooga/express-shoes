@@ -3,27 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class UserModel extends CI_Model {
 
-	public function get_all_user()
+	function get_all_user()
 	{
-        $this->db->select("tb_user.*");
-		$this->db->order_by('id_user','desc');
-		return $this->db->get('tb_user')->result();
+		$this->db->select('*');
+		$this->db->from('tb_user');
+		$this->db->order_by('id_user');
+		return $this->db->get()->result();
     }
     
-    public function get_id($id)
+    function get_id($id)
     {
-        return $this->db->where('id_user',$id)->get('tb_user')->row(0);
+        $this->db->select('*');
+		$this->db->from('tb_user');
+	   	$this->db->where('id_user', $id);
+		return $this->db->get()->row(0);
     }
 
-    public function insert()
+    function insert_data()
     {
         $data = [
-            'nama_user' => htmlspecialchars($this->input->post('nama_user', TRUE)),
-            'email' => htmlspecialchars($this->input->post('email', TRUE)),
+            'nama_user' => $this->input->post('nama_user'),
+            'email' => $this->input->post('email'),
             'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             'no_telp' => $this->input->post('no_telp'),
             'alamat' => $this->input->post('alamat'),
-            'foto' => 'default.jpg',
             'role_id' => 1,
             'is_active' => 1,
             'date_created' => date("Y-m-d H:i:s"),
@@ -31,18 +34,13 @@ class UserModel extends CI_Model {
         
     }
 
-    public function update($id)
+    function update_data($id)
     {
         $data = [
-            'nama_user' => htmlspecialchars($this->input->post('nama_user', TRUE)),
-            'email' => htmlspecialchars($this->input->post('email', TRUE)),
-            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+            'nama_user' => $this->input->post('nama_user'),
+            'email' => $this->input->post('email'),
             'no_telp' => $this->input->post('no_telp'),
             'alamat' => $this->input->post('alamat'),
-            'foto' => 'user.png',
-            'toko_id' => $this->input->post('toko_id'),
-            'sepatu_id' => $this->input->post('sepatu_id'),
-            'is_active' => 1,
             'date_created' => date("Y-m-d H:i:s"),
         ];
 
@@ -50,9 +48,9 @@ class UserModel extends CI_Model {
         $this->db->update('tb_user', $data);
     }
 
-    public function delete($id)
+    function delete($id)
     {
         $this->db->where('id_user',$id);
-		$delete = $this->db->delete('tb_user');
+		$this->db->delete('tb_user');
     }
 }
