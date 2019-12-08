@@ -25,15 +25,14 @@
             </div>
 
             <div class="form-group row">
-                <label for="password1" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-5">
-                    <input type="password" class="form-control" id="password1" name="password1" placeholder="Password">
-                    <?php echo form_error('password1','<small class="text-danger pl-3">','</small>' ); ?>
-                </div>
-
-                <div class="col-sm-5">
-                    <input type="password" class="form-control" id="password2" name="password2" placeholder="Repeat Password">
-                    <?php echo form_error('password1','<small class="text-danger pl-3">','</small>' ); ?>
+                <label for="gender_id" class="col-sm-2 col-form-label">Gender</label>
+                <div class="col-sm-10">
+                    <input type="gender_id" class="form-control" id="gender_id" name="gender_id" placeholder="Gender" value="<?php if($data->gender_id == 1){
+                            echo "Male";
+                        } else {
+                            echo "Female";
+                        } ?>" readonly>
+                    <?php echo form_error('gender_id','<small class="text-danger pl-3">','</small>' ); ?>
                 </div>
             </div>
 

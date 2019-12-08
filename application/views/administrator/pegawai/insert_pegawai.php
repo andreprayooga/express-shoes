@@ -25,6 +25,19 @@
             </div>
 
             <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Gender</label>
+                <div class="col-sm-10">
+                <select id="gender_id" name="gender_id" class="form-control" >
+                <option selected>Choose Gender</option>
+                    <?php foreach  ($this->db->get('tb_gender')->result_array() as $num => $val) :  ?>
+                    <option value="<?php echo $val['id_gender'] ?>"><?php echo $val['keterangan'] ?></option>
+                    <?php endforeach; ?>
+                    <?php echo form_error('gender_id','<small class="text-danger pl-3">','</small>' ); ?>
+                </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
                 <label for="password1" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-5">
                     <input type="password" class="form-control" id="password1" name="password1" placeholder="Password" value="<?php echo set_value('password1') ?>">

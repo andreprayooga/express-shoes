@@ -55,7 +55,7 @@ class DataToko extends CI_Controller {
 			if ($this->upload->do_upload('logo')) {
 				$upload_data = $this->upload->data();
 				$this->TokoModel->insert_data($upload_data['file_name']);
-				$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data berhasil ditambahkan!</div>');
+				$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"><b>Success!</b> Data has been added!</div>');
 				redirect('administrator/datatoko');
 			} else {
 				echo $this->upload->display_errors();
@@ -116,5 +116,20 @@ class DataToko extends CI_Controller {
 		$this->TokoModel->delete_data($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data has been deleted!</div>');
 		redirect('administrator/datatoko');
+	}
+
+	public function getAllStore()
+	{
+		$data['title'] = 'Maps Store View';
+		$data['tb_admin'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+		$data['url'] = 'DataToko';
+
+		$data['data'] = $this->TokoModel->get_all_data();
+
+        $this->load->view('administrator/templates/header', $data);
+        $this->load->view('administrator/templates/sidebar', $data);
+        $this->load->view('administrator/templates/topbar', $data);
+        $this->load->view('administrator/toko/view_all_toko', $data);
+        $this->load->view('administrator/templates/footer');
 	}
 }

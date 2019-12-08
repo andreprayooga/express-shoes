@@ -44,6 +44,12 @@
 	<script src="<?= base_url('assets/administrator/vendor/jquery/jquery.min.js') ?>"></script>
 	<script src="<?= base_url('assets/administrator/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
+	<!-- Mapbox -->
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="<?php echo base_url('assets/administrator/dist/js/leaflet.ajax.js')  ?>"></script>
+
 	<!-- Core plugin JavaScript-->
 	<script src="<?= base_url('assets/administrator/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
@@ -73,6 +79,26 @@
 			$('#jam_buka').datetimepicker();
 			$('#jam_tutup').datetimepicker();
         });
+
+		var mymap = L.map('mapid').setView([-7.945917, 112.618320], 30);
+
+		L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			maxZoom: 18,
+			id: 'mapbox/streets-v11',
+			accessToken: 'pk.eyJ1IjoiYW5kcmVwcmF5b29nYSIsImEiOiJjazJvd3B4NzkwZnp0M21wYmxqbTJlZHdiIn0.8mU4ihR8qSuqLihMdLyKCg'
+		}).addTo(mymap);
+
+		function popUp(f,l){
+			var out = [];
+			if (f.properties){
+				for(key in f.properties){
+					out.push(key+": "+f.properties[key]);
+				}
+				l.bindPopup(out.join("<br />"));
+			}
+		}	
+		var jsonTest = new L.GeoJSON.AJAX(["<?php echo base_url('assets/administrator/json/indonesia-prov.geojson') ?>"],{onEachFeature:popUp}).addTo(mymap);
     </script>
 
 </body>

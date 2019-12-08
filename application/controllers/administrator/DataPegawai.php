@@ -30,6 +30,7 @@ class DataPegawai extends CI_Controller {
 	{
 		$this->form_validation->set_rules('nama_pegawai', 'Nama Pegawai', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+		$this->form_validation->set_rules('gender_id', 'Gender', 'trim|required');
 		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]', [
 			'matches' => 'Password dont match!',
 			'min_length' => 'Password too short!'
@@ -59,7 +60,7 @@ class DataPegawai extends CI_Controller {
 			if ($this->upload->do_upload('foto')) {
 				$upload_data = $this->upload->data();
 				$this->PegawaiModel->insert_data($upload_data['file_name']);
-				$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data has been created!</div>');
+				$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data has been added!</div>');
 				redirect('administrator/datapegawai');
 			} else {
 				echo $this->upload->display_errors();
@@ -117,9 +118,6 @@ class DataPegawai extends CI_Controller {
 
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Data failed to update!</div>');
 			redirect('administrator/datapegawai');
-
-			var_dump($data);
-			die;
 		}
 	}
 }

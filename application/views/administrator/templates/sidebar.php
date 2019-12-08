@@ -74,15 +74,8 @@
 		</div>
 	  </li>
 
-		<!-- Nav Item - Pages Collapse Menu -->
-	  <li class="nav-item <?php echo $url == 'Profile' ? "active" : ''?>">
-		<a class="nav-link pb-0 pt-0" href="<?= base_url('administrator/Profile') ?>">
-		  <i class="fas fa-fw fa-user-shield"></i>
-		  <span>My Profile</span> </a>
-	  </li>
-
 	  <li class="nav-item">
-		<a class="nav-link" href="<?= base_url('Auth/logout') ?>">
+		<a class="nav-link pt-0" href="<?= base_url('Auth/logout') ?>">
 		  <i class="fas fa-fw fa-sign-out-alt"></i>
 		  <span>Logout</span></a>
 	  </li>

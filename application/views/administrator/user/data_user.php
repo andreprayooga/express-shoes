@@ -39,9 +39,9 @@
 								<td><?php echo $val->email ?></td>
 								<td><?php echo $val->no_telp  ?></td>
 								<td><?php if($val->is_active == 1 ){
-										echo '<span class="badge badge-pill badge-success">Active</span>';
+										echo '<span class="badge badge-success">Active</span>';
 									} else{
-										echo '<span class="badge badge-pill badge-danger">Inactive</span>';
+										echo '<span class="badge badge-danger">Inactive</span>';
 									}  
 								?></td>
 								<td>

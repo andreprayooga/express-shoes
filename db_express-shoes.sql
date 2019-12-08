@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2019 at 07:35 AM
+-- Generation Time: Dec 08, 2019 at 05:38 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -132,6 +132,40 @@ INSERT INTO `tb_admin` (`id_admin`, `nama_admin`, `email`, `foto`, `username`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_gender`
+--
+
+CREATE TABLE `tb_gender` (
+  `id_gender` int(11) NOT NULL,
+  `keterangan` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_gender`
+--
+
+INSERT INTO `tb_gender` (`id_gender`, `keterangan`) VALUES
+(1, 'Male'),
+(2, 'Female');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_jadwal`
+--
+
+CREATE TABLE `tb_jadwal` (
+  `id_jadwal` int(11) NOT NULL,
+  `toko_id` int(11) NOT NULL,
+  `hari` varchar(128) NOT NULL,
+  `jam_buka` varchar(256) NOT NULL,
+  `jam_tutup` varchar(256) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_komentar`
 --
 
@@ -154,6 +188,7 @@ CREATE TABLE `tb_komentar` (
 CREATE TABLE `tb_pegawai` (
   `id_pegawai` int(11) NOT NULL,
   `nama_pegawai` varchar(256) NOT NULL,
+  `gender_id` int(1) NOT NULL,
   `email` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
   `toko_id` int(11) NOT NULL,
@@ -163,24 +198,13 @@ CREATE TABLE `tb_pegawai` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `tb_pengelola`
+-- Dumping data for table `tb_pegawai`
 --
 
-CREATE TABLE `tb_pengelola` (
-  `id_pengelola` int(11) NOT NULL,
-  `nama_pengelola` varchar(256) NOT NULL,
-  `email` varchar(256) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  `no_telp` varchar(128) NOT NULL,
-  `foto` varchar(256) NOT NULL,
-  `is_active` int(1) NOT NULL,
-  `role_id` int(11) NOT NULL,
-  `fk_toko` int(11) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `tb_pegawai` (`id_pegawai`, `nama_pegawai`, `gender_id`, `email`, `password`, `toko_id`, `foto`, `role_id`, `is_active`, `date_created`) VALUES
+(1, 'Guardian', 1, 'nav1_guardian@gmail.com', '$2y$10$6X00HJVuTLNmIRfANeRMr.tJWPVq5v.5CV1fX5n698npFlyvUX6sG', 35, '00-08-5122.png', 3, 1, '2019-11-26 20:40:20'),
+(3, 'Maria Gonzalez', 2, 'mariagonzalez12@gmail.com', '$2y$10$6jsXJwkaYfpDxDPqGttV5O9uMHA5RPoYhc9Q6/9XjpoWRZOqqAGfK', 35, 'Aunt-5121.png', 3, 1, '2019-11-27 09:34:45');
 
 -- --------------------------------------------------------
 
@@ -200,8 +224,7 @@ CREATE TABLE `tb_role` (
 INSERT INTO `tb_role` (`id_level`, `keterangan`) VALUES
 (1, 'Administrator'),
 (2, 'Member'),
-(3, 'Employee'),
-(4, 'Pengelola');
+(3, 'Employee');
 
 -- --------------------------------------------------------
 
@@ -247,9 +270,9 @@ CREATE TABLE `tb_toko` (
   `email` varchar(256) NOT NULL,
   `alamat` varchar(256) NOT NULL,
   `no_telp` varchar(128) NOT NULL,
-  `logo` varchar(128) NOT NULL,
-  `jam_buka` time NOT NULL,
-  `jam_tutup` time NOT NULL,
+  `logo` varchar(128) NOT NULL DEFAULT 'default.jpg',
+  `latitude` varchar(256) NOT NULL,
+  `longitude` varchar(256) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -257,15 +280,10 @@ CREATE TABLE `tb_toko` (
 -- Dumping data for table `tb_toko`
 --
 
-INSERT INTO `tb_toko` (`id_toko`, `nama_toko`, `email`, `alamat`, `no_telp`, `logo`, `jam_buka`, `jam_tutup`, `date_created`) VALUES
-(1, '123', 'qwqw@gmail.com', 'cfdfddf', '3344343434', '', '06:15:00', '05:00:00', '2019-11-19 16:05:16'),
-(2, 'Bungaku', 'bunga@gmail.com', 'Malang', '12341234', '', '05:15:00', '05:15:00', '2019-11-19 16:08:23'),
-(3, 'sddds', '11@gmail.com', 'cddfdf', '1212121', 'file_name', '05:15:00', '05:15:00', '2019-11-19 16:10:10'),
-(4, '1212', 'amaw@gmail.com', 'sdsdsdsdsd', '1112112', 'file_name', '05:15:00', '05:15:00', '2019-11-19 16:15:39'),
-(5, '1221222', 'anss@gmail.com', 'saasas', '12112112', '', '05:15:00', '05:15:00', '2019-11-19 16:21:16'),
-(6, '1122', 'fdgg@gmail.com', 'sdsddsd', '121222121', '', '05:30:00', '05:30:00', '2019-11-19 16:22:03'),
-(7, '121221', 'sddd@gmail.com', 'dss', '2232233', '', '05:30:00', '05:30:00', '2019-11-19 16:22:47'),
-(8, 'weewwewew', '2434@gmail.com', 'dssdds', '13245324', '', '01:00:00', '01:00:00', '2019-11-20 11:50:04');
+INSERT INTO `tb_toko` (`id_toko`, `nama_toko`, `email`, `alamat`, `no_telp`, `logo`, `latitude`, `longitude`, `date_created`) VALUES
+(35, 'Sepatu Bersih', 'sepatubersih_mlg@gmail.com', 'Jl. Mayjend. Panjaitan No.229, Penanggungan, Kec. Klojen, Kota Malang, Jawa Timur 65113', '081335833272', '00-08-5121.png', '-7.951579', '112.617594', '2019-11-26 20:29:07'),
+(36, 'Monkey Laundry', 'monkey555@gmail.com', 'Jl. MT. Haryono No.195 - 197, Dinoyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144', '(0341) 560060', 'nkr11.jpg', '-7.937732', '112.607306', '2019-11-27 15:14:44'),
+(37, 'Kribo Laundry', 'kribo_clean66@gmail.com', 'Jl. Kawi No.24, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65116', '(0341) 366366', 'nkr12.jpg', '-7.976135', '112.623892', '2019-11-27 15:16:35');
 
 -- --------------------------------------------------------
 
@@ -280,11 +298,17 @@ CREATE TABLE `tb_user` (
   `password` varchar(256) NOT NULL,
   `no_telp` varchar(128) NOT NULL,
   `alamat` varchar(512) NOT NULL,
-  `foto` varchar(128) NOT NULL,
   `role_id` int(11) NOT NULL,
   `is_active` int(1) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_user`
+--
+
+INSERT INTO `tb_user` (`id_user`, `nama_user`, `email`, `password`, `no_telp`, `alamat`, `role_id`, `is_active`, `date_created`) VALUES
+(1, 'Prabu Jayabaya', 'jayabayakediri1950@gmail.com', '$2y$10$45ggJQC.StqKGEa1bhLNHesuuRiOFHMqoEINXQYC8ZueRZCWa6/ky', '085387098112', 'Jl. Selomangleng, Pojok, Kec. Mojoroto, Kota Kediri, Jawa Timur 64115', 2, 1, '2019-11-26 19:02:19');
 
 -- --------------------------------------------------------
 
@@ -339,6 +363,19 @@ ALTER TABLE `tb_admin`
   ADD KEY `role_id` (`role_id`) USING BTREE;
 
 --
+-- Indexes for table `tb_gender`
+--
+ALTER TABLE `tb_gender`
+  ADD PRIMARY KEY (`id_gender`);
+
+--
+-- Indexes for table `tb_jadwal`
+--
+ALTER TABLE `tb_jadwal`
+  ADD PRIMARY KEY (`id_jadwal`),
+  ADD KEY `toko_id` (`toko_id`);
+
+--
 -- Indexes for table `tb_komentar`
 --
 ALTER TABLE `tb_komentar`
@@ -349,14 +386,9 @@ ALTER TABLE `tb_komentar`
 --
 ALTER TABLE `tb_pegawai`
   ADD PRIMARY KEY (`id_pegawai`),
-  ADD KEY `role_id` (`role_id`);
-
---
--- Indexes for table `tb_pengelola`
---
-ALTER TABLE `tb_pengelola`
-  ADD PRIMARY KEY (`id_pengelola`),
-  ADD KEY `role_id` (`role_id`);
+  ADD KEY `role_id` (`role_id`),
+  ADD KEY `gender_id` (`gender_id`),
+  ADD KEY `toko_id` (`toko_id`);
 
 --
 -- Indexes for table `tb_role`
@@ -427,6 +459,18 @@ ALTER TABLE `tb_admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `tb_gender`
+--
+ALTER TABLE `tb_gender`
+  MODIFY `id_gender` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tb_jadwal`
+--
+ALTER TABLE `tb_jadwal`
+  MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_komentar`
 --
 ALTER TABLE `tb_komentar`
@@ -436,19 +480,13 @@ ALTER TABLE `tb_komentar`
 -- AUTO_INCREMENT for table `tb_pegawai`
 --
 ALTER TABLE `tb_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tb_pengelola`
---
-ALTER TABLE `tb_pengelola`
-  MODIFY `id_pengelola` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_role`
 --
 ALTER TABLE `tb_role`
-  MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_sepatu`
@@ -466,13 +504,13 @@ ALTER TABLE `tb_service`
 -- AUTO_INCREMENT for table `tb_toko`
 --
 ALTER TABLE `tb_toko`
-  MODIFY `id_toko` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_toko` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -491,16 +529,18 @@ ALTER TABLE `tb_admin`
   ADD CONSTRAINT `tb_admin_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
 
 --
+-- Constraints for table `tb_jadwal`
+--
+ALTER TABLE `tb_jadwal`
+  ADD CONSTRAINT `tb_jadwal_ibfk_1` FOREIGN KEY (`toko_id`) REFERENCES `tb_toko` (`id_toko`);
+
+--
 -- Constraints for table `tb_pegawai`
 --
 ALTER TABLE `tb_pegawai`
-  ADD CONSTRAINT `tb_pegawai_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
-
---
--- Constraints for table `tb_pengelola`
---
-ALTER TABLE `tb_pengelola`
-  ADD CONSTRAINT `tb_pengelola_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`);
+  ADD CONSTRAINT `tb_pegawai_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `tb_role` (`id_level`),
+  ADD CONSTRAINT `tb_pegawai_ibfk_2` FOREIGN KEY (`gender_id`) REFERENCES `tb_gender` (`id_gender`),
+  ADD CONSTRAINT `tb_pegawai_ibfk_3` FOREIGN KEY (`toko_id`) REFERENCES `tb_toko` (`id_toko`);
 
 --
 -- Constraints for table `tb_sepatu`

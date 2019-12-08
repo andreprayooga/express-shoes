@@ -26,6 +26,7 @@
 						<th>Nama Toko</th>
 						<th>Email</th>
 						<th>Store</th>
+						<th>Gender</th>
 						<th>Status</th>
 						<th>Options</th>
 					</tr>
@@ -37,6 +38,7 @@
 						<th>Nama Toko</th>
 						<th>Email</th>
 						<th>Store</th>
+						<th>Gender</th>
 						<th>Status</th>
 						<th>Options</th>
                     </tr>
@@ -48,10 +50,11 @@
 								<td><?php echo $val->nama_pegawai ?></td>
 								<td><?php echo $val->email ?></td>
 								<td><?php echo $val->nama_toko ?></td>
+								<td><?php echo $val->gender_id == 1 ? "Male" : "Female" ?></td>
 								<td><?php if($val->is_active == 1 ){
-										echo '<span class="badge badge-pill badge-success">Active</span>';
+										echo '<span class="badge badge-success">Active</span>';
 									} else{
-										echo '<span class="badge badge-pill badge-danger">Inactive</span>';
+										echo '<span class="badge badge-danger">Inactive</span>';
 									}  
 								?></td>
 								<td>
@@ -71,4 +74,5 @@
         <!-- /.container-fluid -->
 
       </div>
-      <!-- End of Main Content -->
+	  <!-- End of Main Content -->
+	  

@@ -14,10 +14,11 @@ class PegawaiModel extends CI_Model {
     function get_sub()
     {
         $this->db->select("tb_pegawai.*, (SELECT nama_toko FROM tb_toko WHERE 
-                    id_toko = tb_pegawai.toko_id) AS nama_toko");
+					id_toko = tb_pegawai.toko_id) AS nama_toko");
 
         return $this->db->get('tb_pegawai')->result();
-    }
+	}
+	
 
 	function get_id($id)
 	{
@@ -31,7 +32,8 @@ class PegawaiModel extends CI_Model {
 	{
 		$data = array (
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
-            'email' => $this->input->post('email'),
+			'email' => $this->input->post('email'),
+			'gender_id' => $this->input->post('gender_id'),
             'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),  
 			'toko_id' => $this->input->post('toko_id'),
             'foto' => $foto,
