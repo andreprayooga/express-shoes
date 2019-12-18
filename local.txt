@@ -75,3 +75,9 @@ Tabel Jadwal
 - jam_buka
 - jam_tutup
 - date_created
+
+Tabel Type 
+- id_type
+- foto
+- jenis sepatu 
+- date created

@@ -1,111 +1,245 @@
-<footer class="footer-area section_gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3  col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">About Us</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">Newsletter</h6>
-						<p>Stay updated with our latest trends</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="subscribe_form relative">
-								<div class="input-group d-flex flex-row">
-									<input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-									 required="" type="email">
-									<button class="btn sub-btn">
-										<span class="lnr lnr-arrow-right"></span>
-									</button>
-								</div>
-								<div class="mt-10 info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-footer-widget instafeed">
-						<h6 class="footer_title">Instagram Feed</h6>
-						<ul class="list instafeed d-flex flex-wrap">
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-01.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-02.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-03.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-04.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-05.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-06.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-07.jpg" alt="">
-							</li>
-							<li>
-								<img src="<?php echo base_url('assets/home/'); ?>img/instagram/Image-08.jpg" alt="">
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget f_social_wd">
-						<h6 class="footer_title">Follow Us</h6>
-						<p>Let us be social</p>
-						<div class="f_social">
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-dribbble"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-behance"></i>
-							</a>
-						</div>
+	<!-- Footer -->
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+		<div class="flex-w p-b-90">
+			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+				<h4 class="s-text12 p-b-30">
+					GET IN TOUCH
+				</h4>
+
+				<div>
+					<p class="s-text7 w-size27">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+					</p>
+
+					<div class="flex-m p-t-30">
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
 					</div>
 				</div>
 			</div>
-			<div class="row footer-bottom d-flex justify-content-between align-items-center">
-				<p class="col-lg-12 footer-text text-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</p>
+
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">
+					Categories
+				</h4>
+
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Men
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Women
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Dresses
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Sunglasses
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">
+					Links
+				</h4>
+
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Search
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							About Us
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Contact Us
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Returns
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">
+					Help
+				</h4>
+
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Track Order
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Returns
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							Shipping
+						</a>
+					</li>
+
+					<li class="p-b-9">
+						<a href="#" class="s-text7">
+							FAQs
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
+				<h4 class="s-text12 p-b-30">
+					Newsletter
+				</h4>
+
+				<form>
+					<div class="effect1 w-size9">
+						<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
+						<span class="effect1-line"></span>
+					</div>
+
+					<div class="w-size2 p-t-20">
+						<!-- Button -->
+						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+							Subscribe
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="t-center p-l-15 p-r-15">
+			<a href="#">
+				<img class="h-size2" src="<?php echo base_url('assets/home/'); ?>images/icons/paypal.png" alt="IMG-PAYPAL">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="<?php echo base_url('assets/home/'); ?>images/icons/visa.png" alt="IMG-VISA">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="<?php echo base_url('assets/home/'); ?>images/icons/mastercard.png" alt="IMG-MASTERCARD">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="<?php echo base_url('assets/home/'); ?>images/icons/express.png" alt="IMG-EXPRESS">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="<?php echo base_url('assets/home/'); ?>images/icons/discover.png" alt="IMG-DISCOVER">
+			</a>
+
+			<div class="t-center s-text8 p-t-20">
+				Copyright © 2018 All rights reserved. | This template is edited <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/andreprayooga/express-shoes.git" target="_blank">Kelompok 8</a>
 			</div>
 		</div>
 	</footer>
-	<!--================ End footer Area  =================-->
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="<?php echo base_url('assets/home/'); ?>js/jquery-3.2.1.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>js/popper.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>js/stellar.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/lightbox/simpleLightbox.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/isotope/isotope-min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>js/jquery.ajaxchimp.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/flipclock/timer.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>vendors/counter-up/jquery.counterup.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>js/mail-script.js"></script>
-	<script src="<?php echo base_url('assets/home/'); ?>js/theme.js"></script>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+	<!-- Modal Video 01-->
+	<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+
+		<div class="modal-dialog" role="document" data-dismiss="modal">
+			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+			<div class="wrap-video-mo-01">
+				<div class="w-full wrap-pic-w op-0-0"><img src="<?php echo base_url('assets/home/'); ?>images/icons/video-16-9.jpg" alt="IMG"></div>
+				<div class="video-mo-01">
+					<iframe src="https://www.youtube.com/embed/Nt8ZrWY2Cmk?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/select2/select2.min.js"></script>
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/lightbox2/js/lightbox.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="<?php echo base_url('assets/home/'); ?>vendor/parallax100/parallax100.js"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url('assets/home/'); ?>js/main.js"></script>
+
 </body>
-
 </html>

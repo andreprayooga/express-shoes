@@ -12,11 +12,7 @@
 				</div>
 
 				<div class="float-right">
-				<a class="btn btn-sm btn-primary mt-2" href="<?php echo base_url('administrator/datatoko/getallstore')  ?>"><i class="fas fa-plus-circle mr-1"></i>View All</a>
-				</div>
-
-				<div class="float-right">
-				<a class="btn btn-sm btn-primary mt-2 mr-2" href="<?php echo base_url('administrator/datatoko/insert')  ?>"><i class="fas fa-plus-circle mr-1"></i>Add Data</a>
+				<a class="btn btn-sm btn-primary mt-2 mr-2" href="<?php echo base_url('administrator/datatoko/insert')  ?>">Add Data</a>
 				</div>
 			</div>
 			</div>

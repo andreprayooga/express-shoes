@@ -80,6 +80,10 @@
 			$('#jam_tutup').datetimepicker();
         });
 
+        $('#collapseCardExample').collapse({
+		  toggle: true
+		});
+
 		var mymap = L.map('mapid').setView([-7.945917, 112.618320], 30);
 
 		L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {

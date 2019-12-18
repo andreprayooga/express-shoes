@@ -93,7 +93,7 @@
 				</div>
 
 				<div class="card-body">
-				<div class="card mb-3" style="max-width: 450px;">
+				<div class="card mb-3 col-sm-10">
         			<div class="row no-gutters">
 						<div class="col-md-4">
 							<img src="<?= base_url('assets/administrator/dist/img/profile/') . $tb_admin['foto']; ?>" class="card-img" alt="...">
@@ -112,6 +112,41 @@
 				</div>
 			</div>
 
+
+				<div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                  <h6 class="m-0 font-weight-bold text-primary">Form Edit Password</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseCardExample">
+                  <div class="card-body">
+					<form method="POST" action="">
+					  <div class="form-group row">
+					    <label for="inputEmail3" class="col-sm-3 col-form-label">Current Password</label>
+					    <div class="col-sm-9">
+					      <input type="email" class="form-control" id="inputEmail3">
+					    </div>
+					    <?php echo form_error('email','<small class="text-danger pl-3">','</small>' ); ?>
+					  </div>
+
+					  <div class="form-group row">
+					    <label for="inputPassword3" class="col-sm-3 col-form-label">New Password</label>
+					    <div class="col-sm-9">
+					      <input type="password" class="form-control" id="inputPassword3">
+					    </div>
+					  </div>
+
+					  	<div class="form-group row">
+					    <label for="inputPassword3" class="col-sm-3 col-form-label">Repeat Password</label>
+					    <div class="col-sm-9">
+					      <input type="password" class="form-control" id="inputPassword3">
+					    </div>
+					  </div>
+					</form>
+                  </div>
+                </div>
+              </div>
 			
 
 			</div>

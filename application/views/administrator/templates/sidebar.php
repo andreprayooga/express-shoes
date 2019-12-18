@@ -35,20 +35,47 @@
 	  </li>
 
 			<!-- Nav Item - Utilities Collapse Menu -->
-	  <li class="nav-item <?php echo $url == 'DataUser' ? "active" : ''?> || <?php echo $url == 'DataPengelola' ? "active" : ''?> || <?php echo $url == 'DataPegawai' ? "active" : ''?>" >
+	  <li class="nav-item <?php echo $url == 'DataUser' ? "active" : ''?> || <?php echo $url == 'DataPengelola' ? "active" : ''?> || <?php echo $url == 'DataPegawai' ? "active" : ''?> ||  <?php echo $url == 'Service' ? "active" : ''?>" >
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
 		  <i class="fas fa-fw fa-chess-queen"></i>
 		  <span>Master Data</span>
 		</a>
 
-		<div id="collapseUtilities" class="collapse <?php echo $url == 'DataUser' ? "show" : ''?> || <?php echo $url == 'DataPengelola' ? "show" : ''?> || <?php echo $url == 'DataPegawai' ? "show" : ''?>" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+		<div id="collapseUtilities" class="collapse <?php echo $url == 'DataUser' ? "show" : ''?> || <?php echo $url == 'DataPengelola' ? "show" : ''?> || <?php echo $url == 'DataPegawai' ? "show" : ''?> || <?php echo $url == 'Service' ? "show" : ''?>" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
 		  <div class="bg-white py-2 collapse-inner rounded">
 			<h6 class="collapse-header">Utilities :</h6>
 			<a class="collapse-item <?php echo $url == 'DataUser' ? "active" : ''?>" href="<?= base_url('administrator/datauser') ?>"><i class="fas fa-fw fa-users mr-2"></i>User Data</a>
 			<a class="collapse-item <?php echo $url == 'DataPegawai' ? "active" : ''?>" href="<?= base_url('administrator/datapegawai') ?>"><i class="fas fa-fw fa-user-check mr-2"></i>Employee Data</a>
+			<a class="collapse-item <?php echo $url == 'Service' ? "active" : ''?>" href="<?= base_url('administrator/service') ?>"><i class="fas fa-fw fa-cogs mr-2"></i>Service Data</a>
 		  </div>
 		</div>
 	  </li>
+
+	  <!-- Divider -->
+	  <hr class="sidebar-divider">
+
+	  	  <!-- Heading -->
+	  <div class="sidebar-heading">
+		Main Dashboard
+	  </div>
+
+	  	<li class="nav-item <?php echo $url == 'Banner' ? "active" : ''?>">
+			<a class="nav-link pb-0" href="<?= base_url('administrator/menu/banner') ?>">
+			<i class="fas fa-fw fa-scroll"></i>
+			<span>Banner Carousell</span></a>
+		</li>
+
+		<li class="nav-item <?php echo $url == 'Shoes' ? "active" : ''?>">
+			<a class="nav-link pb-0" href="<?= base_url('administrator/menu/shoes') ?>">
+			<i class="fas fa-fw fa-shoe-prints"></i>
+			<span>Shoes</span></a>
+		</li>
+
+		<li class="nav-item <?php echo $url == 'DataToko' ? "active" : ''?>">
+			<a class="nav-link" href="<?= base_url('administrator/DataToko') ?>">
+			<i class="fab fa-fw fa-instagram"></i>
+			<span>Instagram</span></a>
+		</li>
 
 	  <!-- Divider -->
 	  <hr class="sidebar-divider">

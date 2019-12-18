@@ -1,22 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="<?php echo base_url('assets/home/'); ?>img/favicon.png" type="image/png">
-	<title><?php echo $title; ?></title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>css/bootstrap.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>vendors/linericon/style.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>vendors/lightbox/simpleLightbox.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>vendors/jquery-ui/jquery-ui.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>css/style.css">
-	<link rel="stylesheet" href="<?php echo base_url('assets/home/'); ?>css/responsive.css">
+	<title>Home 02</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="<?php echo base_url('assets/home/'); ?>images/icons/shopping.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>fonts/themify/themify-icons.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>fonts/elegant-font/html-css/style.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>vendor/lightbox2/css/lightbox.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/home/'); ?>css/main.css">
+<!--===============================================================================================-->
 </head>
